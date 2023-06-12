@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
+/* importamos Raleway de google fonts con size 300 y 400 */
+
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+@font-face {
+    font-family: "Booter - Zero Zero";
+    src: url("/Fonts/Booter - Zero Zero.woff") format("woff"),
+         url("/Fonts/Booter - Zero Zero.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    /* añadimos y definimos fuente local */
+}
+
+* {
+    box-sizing: border-box;
+    /* el border no se suma al tamaño especificado */
+    font-family: 'Raleway', sans-serif;
+    /* aplicamos el tipo de fuente a todo el texto + fuente de backup */
+    color: #777;
+}
+
+html body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* quitamos los margin por defecto de la página */
+} 
+
+.main-header {
+    background-color: rgba(0, 0, 0,.6);
+    /* aplica sobre la imagen color negro con 60% de transparencia*/ 
+    background-image: url("./images/Header Background.jpg");
+    background-blend-mode: multiply; 
+    /* permite usar background-color + background-image simultaneamente*/
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+.nav ul {
+    margin: 0;
+/* quitamos el margin por defecto del ul dentro del nav del header */
+}
+
+.nav li {
+    display: inline;
+    /* li como inline-elements (uno al lado del otro) */
+}
+
+.nav a {
+    display: inline-block;
+    padding: .5em;
+    color: white;
+    text-decoration: none;
+    /* quitamos los puntos decorativos por defecto, separamos los elementos y aplicamos color blanco. Con display: inline-block conseguimos tener padding en top y bottom */
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .6);
+    /* aplicamos color al pasar sobre los elementos del header */
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, .3)
+/* centramos los elementos del nav, los hacemos un 10% más grandes, más delgados y añadimos borde inferior para hacer una separación tipo hr */
+}
+.main-nav li {
+    padding: 0 5%;
+    /* separamos más los elementos entre si */
+}
+
+.band-name{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "Booter - Zero Zero";
+    font-weight: normal;
+    color: white;
+    /* formato del nombre de la banda */
+}
+
+.band-name-large {
+    font-size: 8em;
+    /* hacemos más grande el nombre de la banda del header */
+}
+
+.content-section {
+    margin: 1em;
+    min-height: 100%;
+    /* añadimos padding a toda la section */
+}
+
+.container {
+    max-width: 900px;
+   
+    margin:0 auto;
+    padding: 0 1.5em;
+    min-height: 100%;
+    /* el elemento no crecera más de 900px, quitamos el margin top + bot y auto en los laterales para que quede centrado. con el padding evitamos que el texto se quede pegado a los laterales de la ventana */
+}
+.section-header {
+    font-family: "Metal Mania";
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+    /* cambiamos fuente, tamaño, color y centramos el h2. font-weight normal para uqitar el bold por defecto de los h1, h2, ... */
+}
+
+.about-band-image {
+    float: left;
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    border-radius: 50%;
+
+}
+
+.main-footer {
+    background-color: #56CCF2;
+    color: white;
+    padding: .25em 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* la forma de fijar el footer al bottom */
+    /* texto blanco, fondo azul,  */
+}
+
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer ul {
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li {
+    padding: 0 .5em;
+}
+
+.footer-nav img {
+    width: 30px;
+    height: 30px;
+    /* redimenionar imagenes footer */
+}
